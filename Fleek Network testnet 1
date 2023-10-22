@@ -1,0 +1,30 @@
+Requirements 
+Ubuntu (>= 22.04 LTS), min ram 16 GB, 20 GB space
+Create a user
+sudo adduser lgtn
+sudo usermod -aG sudo lgtn
+su lgtn
+cd /home/lgtn
+Run the script for a quick install
+curl https://get.fleek.network | bash
+After creating the service, launch the service by executing the following command:
+sudo systemctl start lightning.service
+Reload the daemon
+sudo systemctl daemon-reload
+Enable the service for starting up on system boot:
+sudo systemctl enable lightning.service
+You can get the details quickly by running the node details script in the terminal connected to your machine or server where the node is set up and running, as follows:
+curl https://get.fleek.network/node_details | bash
+Set up the Metamask browser extension
+Network Name: Fleek Network Testnet
+RPC URL: https://rpc.testnet.fleek.network/rpc/v0
+Chain ID: 59330
+Currency symbol: tFLK
+FAUCET TFLK https://faucet.testnet.fleek.network/
+Mint tFLK
+Stake tFLK
+node status
+sudo systemctl status lightning.service
+you can see output of the node
+tail -f /var/log/lightning/output.log
+done.
